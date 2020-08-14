@@ -15,6 +15,9 @@ import aiwolfpy.contentbuilder as cb
 import logging, json
 from random import randint
 
+# If we run multiple instance of this agent, it is good if
+# Each instance has a different name. In a contest setting,
+# You don't want to do this.
 myname = 'omgus{:02d}'.format(randint(0,99))
 
 class SampleAgent(object):
@@ -35,12 +38,15 @@ class SampleAgent(object):
         logging.debug("# INIT: I am agent {}".format(self.myid))
         self.player_total = game_setting["playerNum"]
 
-        # Start suckyness score, and set my own score to -10000
+        # Initialize a list with the hate score for each player
+        # Also reduce own-hate score by 10k
         self.player_score = [0]*self.player_total
         self.player_score[self.myid-1] = -10000
+
+        # the hate attribute contains the player ID that I hate the most.
         self.hate = self.player_score.index(max(self.player_score)) + 1
 
-    # Vote, Attack and divine the most hated player
+    # I will vote, attack and divine the most hated player so far.
     def vote(self):
         logging.debug("# VOTE: "+str(self.hate))
         return self.hate
