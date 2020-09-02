@@ -2,7 +2,19 @@
 
 Create python agents that can play Werewolf, following the specifications of the [AIWolf Project](http://aiwolf.org)
 
-This has been forked from the official repository by the AIWolf project, and was originally created by [Kei Harada](https://github.com/k-harada).
+# Information
+
+## Tutorial
+
+A video tutorial for the AIWolf project was recently published at IEEE Conference on Games. You can see the tutorial in the three videos below. The tutorial uses code from this repository.
+
+* [Video 1: What is AIwolf?](https://youtu.be/MUXrUR9DmMM) (15 minutes)
+* [Video 2: How to program an AIwolf agent in Python](https://youtu.be/gavJtpRH9bw) (30 minutes)
+* [Video 3: Research directions in AIwolf](https://youtu.be/BZQXLKL6mVk) (25 minutes)
+
+## Bibliography
+
+This tutorial includes a [bibliography of research works on the werewolf game](Bibliography.md). We'll be happy to add more papers to the bibliography, so send us an issue with new references! 
 
 # Changelog:
 
@@ -41,3 +53,8 @@ This has been forked from the official repository by the AIWolf project, and was
 	* Make sure to check early with the competition runners, specially if you want to use something like an specific version of tensorflow.
 	* The competition rules forbid running multiple threads. Numpy and Chainer are correctly set-up server side, but for tensorflow you must make sure that your program follows this rule. Please see the following [post](http://aiwolf.org/archives/1951)
 * For more information, a tutorial from the original author of this package can be seen in this [slideshare](https://www.slideshare.net/HaradaKei/aiwolfpy-v049) (in Japanese).
+
+# About:
+
+This repository is an unofficial fork of the official repository of the AIWolf project, and was originally created by [Kei Harada](https://github.com/k-harada), with the objective of adding more detailed information for English speakers.
+
